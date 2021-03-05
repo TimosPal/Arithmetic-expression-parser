@@ -9,5 +9,5 @@ Allowed symbols : {(,),*,/,+,-}
 
 Input example : (1-2*(2*(1-24))/(20*2/(3-4)) 
 
-# How to run
-Compile with the given makefile
+## How to run
+Compile with the given makefile , run the program and input an arithmetic string with the allowed symbols.
