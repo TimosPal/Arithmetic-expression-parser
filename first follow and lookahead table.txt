@@ -1,0 +1,24 @@
+#01	expr  ->   term expr2
+#02	expr2 -> + term expr2
+#03	      |  - term expr2
+#04	      |  ε
+#05	term  ->   fac term2
+#06	term2 -> * fac term2
+#07	      |  / fac term2
+#08	      |  ε
+#09	fac   -> num
+#10	      |  "(" expr ")"
+
+	first	follow
+expr	n(	$)
+expr2	+-ε	$)
+term	n(	+-$)
+term2	*/ε	+-$)
+fac	n(	*/+-$)
+
+	+  -  *  (  )  $  n  /
+expr	         1        1
+expr2	2  3        4  4
+term	         5        5
+term2	8  8  6     8  8     7
+fac	         10       9
