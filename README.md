@@ -2,6 +2,7 @@
 A simple recursive descent parser for arithmetic expressions.
 
 First / Follow / Lookahead sets are included
+
 The parser also evaluates the value of the expression.
 
 Allowed symbols : {(,),*,/,+,-}
